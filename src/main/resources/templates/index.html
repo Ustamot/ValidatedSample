@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+</head>
+<body>
+<form method="post" action="/">
+    <label for="name">名前：</label><input name="name" type="text" /><br />
+    <label for="age">年齢：</label><input name="age" type="text" /><br />
+    <input type="submit" value="送信" />
+</form>
+
+<div th:if="${person} != null">
+    <span>入力情報</span><br>
+    <span style="color: #0099FF" th:text="${msg}"><font color="red">msg</font></span>
+    <div>
+        <span th:text="${person.name}">ほげほげ</span>
+        <span th:text="${person.age}">99</span>
+        <span>歳</span>
+    </div>
+</div>
+</body>
+</html>
